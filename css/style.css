@@ -1,0 +1,483 @@
+/* Variáveis CSS para cores */
+:root {
+    --primary-green: #00A86B; /* Um verde vibrante */
+    --dark-green: #007A4D;
+    --light-gray: #f4f4f4;
+    --dark-gray: #333;
+    --text-color: #333;
+    --white: #ffffff;
+    --black: #000000;
+}
+
+/* Reset básico e estilos globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif; /* Usando Arial como fallback, idealmente usar uma fonte personalizada */
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--white);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    color: var(--dark-gray);
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 2.8em;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 2.2em;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 1.6em;
+    font-weight: bold;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+a {
+    color: var(--primary-green);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.btn-primary,
+.btn-secondary,
+.btn-tertiary {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+}
+
+.btn-primary {
+    background-color: var(--primary-green);
+    color: var(--white);
+    border: 2px solid var(--primary-green);
+}
+
+.btn-primary:hover {
+    background-color: var(--dark-green);
+    border-color: var(--dark-green);
+    text-decoration: none;
+}
+
+.btn-secondary {
+    background-color: var(--white);
+    color: var(--primary-green);
+    border: 2px solid var(--primary-green);
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary-green);
+    color: var(--white);
+    text-decoration: none;
+}
+
+.btn-tertiary {
+    background-color: var(--black);
+    color: var(--white);
+    border: 2px solid var(--black);
+}
+
+.btn-tertiary:hover {
+    background-color: var(--dark-gray);
+    border-color: var(--dark-gray);
+    text-decoration: none;
+}
+
+/* Header - Hero Section */
+.hero-section {
+    background-color: var(--white);
+    padding: 80px 0;
+    text-align: center;
+}
+
+.hero-section .logo {
+    max-width: 200px;
+    margin-bottom: 20px;
+}
+
+.hero-section h1 {
+    color: var(--black);
+    font-size: 3em;
+}
+
+.hero-section p {
+    font-size: 1.5em;
+    color: var(--dark-gray);
+}
+
+/* Platform Section */
+.platform-section {
+    background-color: var(--light-gray);
+    padding: 50px 0;
+    text-align: center;
+}
+
+.platform-section h2 {
+    color: var(--dark-gray);
+    margin-bottom: 20px;
+}
+
+.platform-section .platform-logo {
+    max-width: 150px;
+}
+
+/* Value Proposition Section */
+.value-proposition-section {
+    background: linear-gradient(to right, #00A86B, #007A4D); /* Gradiente de verde */
+    color: var(--white);
+    padding: 80px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden; /* Para esconder partes do gráfico de fundo */
+}
+
+.value-proposition-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/background_graph.png'); /* Imagem de gráfico abstrato */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.2; /* Transparência para o gráfico */
+    z-index: 0;
+}
+
+.value-proposition-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+.value-proposition-section h2 {
+    color: var(--white);
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.value-proposition-section .highlight {
+    font-size: 3em;
+    font-weight: bold;
+    color: var(--white);
+}
+
+/* Benefits Section */
+.benefits-section {
+    padding: 80px 0;
+    background-color: var(--white);
+}
+
+.benefits-section h2 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.benefit-item {
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: var(--light-gray);
+}
+
+.benefit-item img {
+    max-width: 60px;
+    margin-bottom: 15px;
+}
+
+.benefit-item h3 {
+    color: var(--primary-green);
+    font-size: 1.4em;
+}
+
+/* CTA Technology Section */
+.cta-technology-section {
+    background-color: var(--white);
+    padding: 80px 0;
+}
+
+.cta-technology-section .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.cta-technology-section .cta-content {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+}
+
+.cta-technology-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.cta-technology-section .video-placeholder img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+/* Results Section */
+.results-section {
+    background: linear-gradient(to right, #00A86B, #007A4D); /* Gradiente de verde */
+    color: var(--white);
+    padding: 80px 0;
+    text-align: center;
+}
+
+.results-section h2 {
+    color: var(--white);
+    margin-bottom: 50px;
+}
+
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    justify-items: center;
+}
+
+.results-grid img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* FAQ Section */
+.faq-section {
+    padding: 80px 0;
+    background-color: var(--light-gray);
+}
+
+.faq-section h2 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background-color: var(--white);
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.faq-item h3 {
+    color: var(--dark-gray);
+    margin-bottom: 10px;
+    cursor: pointer; /* Indica que é clicável para expandir/recolher */
+}
+
+.faq-item p {
+    display: none; /* Esconde a resposta por padrão */
+    margin-top: 10px;
+}
+
+.faq-item.active p {
+    display: block; /* Mostra a resposta quando ativo */
+}
+
+/* Exclusive Advantages Section */
+.exclusive-advantages-section {
+    background: linear-gradient(to right, #00A86B, #007A4D); /* Gradiente de verde */
+    color: var(--white);
+    padding: 80px 0;
+    text-align: center;
+}
+
+.exclusive-advantages-section h2 {
+    color: var(--white);
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.exclusive-advantages-section .highlight {
+    font-size: 2em;
+    font-weight: bold;
+    color: var(--white);
+    margin-bottom: 10px;
+}
+
+.exclusive-advantages-section p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.exclusive-advantages-section .cta-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.exclusive-advantages-section .btn-secondary {
+    background-color: var(--white);
+    color: var(--primary-green);
+    border: 2px solid var(--white);
+}
+
+.exclusive-advantages-section .btn-secondary:hover {
+    background-color: var(--primary-green);
+    color: var(--white);
+    border-color: var(--primary-green);
+}
+
+/* Additional Resources Section */
+.additional-resources-section {
+    padding: 80px 0;
+    background-color: var(--white);
+    text-align: center;
+}
+
+.additional-resources-section .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.resource-item {
+    flex: 1;
+    min-width: 280px;
+    max-width: 400px;
+    padding: 30px;
+    background-color: var(--light-gray);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.resource-item h3 {
+    color: var(--dark-gray);
+    margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--black);
+    color: var(--white);
+    padding: 40px 0;
+    text-align: center;
+}
+
+footer .social-links img {
+    width: 30px;
+    margin: 0 10px;
+    filter: invert(100%); /* Ícones brancos */
+}
+
+footer p {
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #bbb;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.2em;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    .hero-section,
+    .value-proposition-section,
+    .benefits-section,
+    .cta-technology-section,
+    .results-section,
+    .faq-section,
+    .exclusive-advantages-section,
+    .additional-resources-section {
+        padding: 50px 0;
+    }
+
+    .benefits-grid,
+    .results-grid,
+    .additional-resources-section .container {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-technology-section .container {
+        flex-direction: column;
+    }
+
+    .cta-technology-section .cta-content {
+        text-align: center;
+    }
+
+    .exclusive-advantages-section .cta-buttons {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    .hero-section p {
+        font-size: 1.2em;
+    }
+
+    .value-proposition-section .highlight {
+        font-size: 2.2em;
+    }
+
+    .btn-primary,
+    .btn-secondary,
+    .btn-tertiary {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+}
+
+
